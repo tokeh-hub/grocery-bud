@@ -67,7 +67,7 @@ function App() {
     <div className="container">
       <form onSubmit={handleSubmit} >
         {alert.show && <Alert {...alert} showAlert={showAlert}/>}
-      <h2>Grocery Bud</h2>
+      <h2>Grocery List</h2>
         <input type='text' placeholder='e.g eggs' autoFocus={true} value={name} onChange={e =>  {setName(e.target.value)}} ></input>
         <button type='submit'>{isEdit? 'Edit' : 'Submit'}</button>
       </form>

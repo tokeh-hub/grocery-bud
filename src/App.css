@@ -29,9 +29,8 @@ input{
 }
 h2{
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 10px;
-
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 button{
   width: 55px;
@@ -79,6 +78,8 @@ article{
   color:rgb(5, 94, 5);
   font-size: 12px;
   font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px
 }
 .alert-danger{
   background-color: rgb(252, 132, 132);
@@ -87,6 +88,8 @@ article{
   color: rgb(104, 5, 5);
   font-size: 12px;
   font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px
 }
 .list{
   margin-top: 10px;
@@ -167,6 +170,8 @@ article:hover{
   .alert-success{
     width: 250px;
     margin-left: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
 }
