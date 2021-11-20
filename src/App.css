@@ -9,6 +9,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 .container{
   background-color: white;
@@ -170,6 +171,48 @@ article:hover{
   .alert-success{
     width: 250px;
     margin-left: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+}
+
+@media (max-width:380px) {
+  .container{
+    background-color: white;
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 100px
+  }
+  input{
+    width: 170px;
+    outline: none;
+    margin-right: 5px;
+    /* border: none; */
+  }
+  .icons{
+    align-self: flex-end;
+    position: absolute;
+    right: 0;
+  }
+  article{
+    width: 230px;
+  }
+  .alert-danger{
+    width: 230px;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .alert-success{
+    width: 230px;
+    margin-left: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
