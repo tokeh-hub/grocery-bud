@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
 import './App.css';
 import List from './List';
 import Alert from './Alert';
@@ -34,7 +34,7 @@ function App() {
       const newItem = {id:Date.now(),title:name}
       setList([...list, newItem])
       setName('')
-      showAlert(true,'success','One Item has been successfully added!')
+      showAlert(true,'success','Item has been successfully added!')
     }
     
   }
@@ -50,7 +50,7 @@ function App() {
   const deleteItem = (id) => {
     console.log(id)
 
-    list.length > 1 && showAlert(true,'danger','One Item Removed')
+    list.length > 1 && showAlert(true,'danger','Item Removed')
     list.length === 1 && showAlert(true,'danger','Empty List')
     const filteredTour = list.filter((item) => item.id !== id)
     setList(filteredTour)

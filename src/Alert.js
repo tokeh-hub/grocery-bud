@@ -7,7 +7,7 @@ export default function Alert({msg,type, showAlert}) {
         return () => {
             clearTimeout(timeout)
         }
-    }, [])
+    })
     return (
         <p className={`alert alert-${type}`}>{msg}</p>
     )
