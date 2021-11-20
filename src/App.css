@@ -29,8 +29,9 @@ input{
 }
 h2{
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-top: 10px;
+
 }
 button{
   width: 55px;
@@ -159,6 +160,8 @@ article:hover{
   .alert-danger{
     width: 250px;
     margin-left: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .alert-success{
