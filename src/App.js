@@ -1,14 +1,26 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import './App.css';
 import List from './List';
 import Alert from './Alert';
 
+
+const getLocalStorage = () =>{
+  let list = localStorage.getItem('list');
+  if(list){
+    return JSON.parse(list)
+  }
+  else{
+    return []
+  }
+}
+
 function App() {
   const [alert,setAlert] = useState({show:false,msg:'Hello',type:'danger'});
-  const [list,setList] = useState([]);
+  const [list,setList] = useState(getLocalStorage());
   const [name,setName] = useState('');
   const [isEdit,setIsEdit] = useState(false);
   const [editID,setEditID] = useState(null) 
+  
   
   const handleSubmit = (e) =>{
     e.preventDefault()
@@ -62,7 +74,11 @@ function App() {
     setEditID(id)
     setName(particularItem.title)
   }
-
+  
+  useEffect(() => {
+    localStorage.setItem('list',JSON.stringify(list))
+  }, [list])
+  
   return (
     <div className="container">
       <form onSubmit={handleSubmit} >
